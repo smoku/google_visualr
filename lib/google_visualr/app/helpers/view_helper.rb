@@ -10,8 +10,8 @@ module GoogleVisualr
         helper_method "render_chart"
       end
 
-      def render_chart(chart, dom)
-        chart.to_js(dom).html_safe
+      def render_chart(chart, dom, options = {:script_tags => true})
+        chart.to_js(dom, options).html_safe
       end
 
     end
